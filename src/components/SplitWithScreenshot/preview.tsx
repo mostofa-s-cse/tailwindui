@@ -1,6 +1,12 @@
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
+import React from "react";
+type CodeSnippets = 'html' | 'react' | 'vue'; // Replace with your actual types
 
-export default function Example() {
+interface PreviewProps {
+    framework: CodeSnippets;
+}
+
+const Preview: React.FC<PreviewProps> = ({ framework }) => {
     return (
         <div className="relative isolate overflow-hidden bg-white">
             <svg
@@ -75,3 +81,4 @@ export default function Example() {
         </div>
     )
 }
+export default Preview;

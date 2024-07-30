@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import React, { useState } from 'react';
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -10,7 +10,13 @@ const navigation = [
     { name: 'Company', href: '#' },
 ]
 
-export default function preview() {
+type CodeSnippets = 'html' | 'react' | 'vue'; // Replace with your actual types
+
+interface PreviewProps {
+    framework: CodeSnippets;
+}
+
+const Preview: React.FC<PreviewProps> = ({ framework }) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
@@ -158,4 +164,4 @@ export default function preview() {
         </div>
     )
 }
-
+export default Preview;

@@ -372,7 +372,7 @@ const mobileMenuOpen = ref(false)
 
 };
 
-const example: React.FC = () => {
+const ExamplePage: React.FC = () => {
     const [selectedFramework, setSelectedFramework] = useState<keyof CodeSnippets>('html');
     const [copySuccess, setCopySuccess] = useState<string>('');
     const [showPreview, setShowPreview] = useState<boolean>(true);
@@ -440,4 +440,4 @@ const example: React.FC = () => {
     );
 }
 
-export default example;
+export default ExamplePage;
